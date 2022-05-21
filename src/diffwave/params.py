@@ -35,21 +35,18 @@ class AttrDict(dict):
 runconfig = AttrDict(
     data_dir='../../samples/LJSpeech/wavs',
     model_dir='../../models',
-    root_dir='E:\Code\Projects\TimbreTransfer\diffwave_custom-master\src\diffwave',
-    root_dir_rel_to_src='../..',
     max_steps=None,
     fp16=False,
     inference_model_path='../../models/weights-47415.pt'
 )
 
+gdrive_model_dir = '/content/gdrive/diffwave/models'
 runconfig_colab = AttrDict(
     data_dir='/content/diffwave/samples/LJSpeech/wavs',
-    model_dir='/content/diffwave/models',
-    root_dir='E:\Code\Projects\TimbreTransfer\diffwave_custom-master\src\diffwave',
-    root_dir_rel_to_src='../..',
+    model_dir=gdrive_model_dir,
     max_steps=None,
     fp16=False,
-    inference_model_path='/content/diffwave/models/weights-47415.pt'
+    inference_model_path=gdrive_model_dir + '/weights-47415.pt'
 )
 
 params = AttrDict(

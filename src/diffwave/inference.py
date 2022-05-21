@@ -20,7 +20,7 @@ import torchaudio
 
 from argparse import ArgumentParser, Namespace
 
-from diffwave.params import AttrDict, params as base_params, runconfig, runconfig_collab
+from diffwave.params import AttrDict, params as base_params, runconfig, runconfig_colab
 from diffwave.model import DiffWave
 
 models = {}
@@ -144,7 +144,7 @@ def run():
     main(parser.parse_args())
 
 def run_from_collab():
-    parameters = Namespace(fast='false', model_dir=runconfig_collab.model_dir, output='output.wav', spectrogram_path=runconfig_collab.default_inference_spectrogram)
+    parameters = Namespace(fast='false', model_dir=runconfig_colab.model_dir, output='output.wav', spectrogram_path=runconfig_colab.default_inference_spectrogram)
     main(parameters)
 
 if __name__ == '__main__':

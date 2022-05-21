@@ -23,7 +23,7 @@ from torch.multiprocessing import spawn
 
 from diffwave.learner import train, train_distributed
 from diffwave.model import DiffusionEmbedding
-from diffwave.params import params, runconfig, runconfig_collab
+from diffwave.params import params, runconfig, runconfig_colab
 
 
 def _get_free_port():
@@ -45,7 +45,7 @@ def main(args):
 
 
 def run_from_colab():
-    parameters = Namespace(model_dir=runconfig_collab.model_dir, data_dirs=[runconfig_collab.data_dir], max_steps=runconfig_collab.max_steps, fp16=False)
+    parameters = Namespace(model_dir=runconfig_colab.model_dir, data_dirs=[runconfig_colab.data_dir], max_steps=runconfig_colab.max_steps, fp16=False)
     main(parameters)
 
 def run():

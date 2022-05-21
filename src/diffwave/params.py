@@ -42,7 +42,7 @@ runconfig = AttrDict(
     inference_model_path='../../models/weights-47415.pt'
 )
 
-runconfig_collab = AttrDict(
+runconfig_colab = AttrDict(
     data_dir='/content/diffwave/samples/LJSpeech/wavs',
     model_dir='/content/diffwave/models',
     root_dir='E:\Code\Projects\TimbreTransfer\diffwave_custom-master\src\diffwave',

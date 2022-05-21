@@ -43,6 +43,7 @@ runconfig = AttrDict(
 
 gdrive_data_dir = '/content/diffwave/samples/LJSpeech/wavs'
 gdrive_model_dir = '/content/drive/MyDrive/diffwave/models'
+gdrive_output_dir = '/content/drive/MyDrive/diffwave/output'
 runconfig_colab = AttrDict(
     data_dir=gdrive_data_dir,
     model_dir=gdrive_model_dir,
@@ -50,6 +51,7 @@ runconfig_colab = AttrDict(
     fp16=False,
     inference_model_path=gdrive_model_dir + '/weights-47415.pt',
     default_inference_spectrogram=gdrive_data_dir + '/LJ001-0001.wav.spec.npy',
+    inference_output_path=gdrive_output_dir + '/output.wav',
 )
 
 params = AttrDict(

@@ -143,9 +143,9 @@ def run():
                         help='fast sampling procedure')
     main(parser.parse_args())
 
-def run_from_collab():
+def run_from_colab():
     parameters = Namespace(fast='false', model_dir=runconfig_colab.model_dir, output='output.wav', spectrogram_path=runconfig_colab.default_inference_spectrogram)
     main(parameters)
 
 if __name__ == '__main__':
-    run_from_collab()
+    run_from_colab()

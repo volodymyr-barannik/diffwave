@@ -1,0 +1,12 @@
+venv
+samples/doi
+doi
+.idea
+samples
+samples/LJSpeech/*
+samples/LJSpeech/wavs
+src/diffwave/__pycache__/*
+samples
+.idea
+src/diffwave/__pycache__
+models/intermediate/*

@@ -40,7 +40,7 @@ runconfig = AttrDict(
     inference_model_path='../../models/weights-47415.pt'
 )
 
-gdrive_model_dir = '/content/gdrive/diffwave/models'
+gdrive_model_dir = '/content/drive/MyDrive/diffwave/models'
 runconfig_colab = AttrDict(
     data_dir='/content/diffwave/samples/LJSpeech/wavs',
     model_dir=gdrive_model_dir,

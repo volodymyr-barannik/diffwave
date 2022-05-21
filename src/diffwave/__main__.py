@@ -45,7 +45,7 @@ def main(args):
 
 
 def run_from_colab():
-    parameters = Namespace(model_dir=runconfig.model_dir, data_dirs=runconfig.data_dir, max_steps=runconfig.max_steps, fp16=False)
+    parameters = Namespace(model_dir=runconfig.model_dir, data_dirs=[runconfig.data_dir], max_steps=runconfig.max_steps, fp16=False)
     main(parameters)
 
 def run():
@@ -64,6 +64,7 @@ def run():
 
 if __name__ == '__main__':
 
+    #run()
     run_from_colab()
 
     if False:

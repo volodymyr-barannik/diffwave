@@ -39,7 +39,8 @@ runconfig = AttrDict(
     root_dir_rel_to_src='../..',
     max_steps=None,
     fp16=False,
-    inference_model_path='../../models/weights-119355.pt'
+    inference_model_path='../../models/weights-119355.pt',
+    default_inference_spectrogram='../../samples/LJSpeech/wavs/LJ001-0001.wav.spec.npy',
 )
 
 params = AttrDict(

@@ -42,7 +42,8 @@ class ConditionalDataset(torch.utils.data.Dataset):
 
             self.filenames += filenames_only
 
-        print(self.filenames)
+        print("ConditionalDataset.paths =", paths)
+        print("ConditionalDataset.filenames =", self.filenames)
 
     def __len__(self):
         return len(self.filenames)

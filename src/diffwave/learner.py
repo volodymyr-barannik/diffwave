@@ -109,6 +109,7 @@ class DiffWaveLearner:
     def train(self, max_steps=None):
         device = next(self.model.parameters()).device
 
+        print(f"started training with max_steps={max_steps}")
         while True:
             tqdmobj = tqdm(self.dataset, desc=f'Epoch {self.step // len(self.dataset)} with epoch loss=n/a')
             for features in tqdmobj if self.is_master else self.dataset:

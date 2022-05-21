@@ -80,6 +80,7 @@ class DiffWaveLearner:
         self.step = state_dict['step']
 
     def save_to_checkpoint(self, filename='weights'):
+        print("saving to checkpoint...")
         save_basename = f'{filename}-{self.step}.pt'
         save_name = f'{self.model_dir}/{save_basename}'
         link_name = f'{self.model_dir}/{filename}.pt'

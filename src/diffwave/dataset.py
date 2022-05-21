@@ -33,14 +33,20 @@ class ConditionalDataset(torch.utils.data.Dataset):
         # get filenames
         self.filenames = []
         for path in paths:
+            print("ConditionalDataset.path =", path)
 
             filenames_only = list(map(os.path.basename, glob(f'{path}/*.wav', recursive=True)))
+            print("ConditionalDataset.filenames_only =", filenames_only)
 
-            # get full relative paths
+            # get full paths
             for i in range(len(filenames_only)):
                 filenames_only[i] = path + '/' + filenames_only[i]
 
+            print("ConditionalDataset.filenames_only after adding prefix path =", filenames_only)
+
             self.filenames += filenames_only
+            print("ConditionalDataset.filenames =", self.filenames)
+
 
         print("ConditionalDataset.paths =", paths)
         print("ConditionalDataset.filenames =", self.filenames)

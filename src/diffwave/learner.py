@@ -83,9 +83,11 @@ class DiffWaveLearner:
         save_basename = f'{filename}-{self.step}.pt'
         save_name = f'{self.model_dir}/{save_basename}'
         link_name = f'{self.model_dir}/{filename}.pt'
-        torch.save(self.state_dict(), save_name)
 
         print(f"saving to checkpoint with save_basename={save_basename}, save_name={save_name}, link_name={link_name}")
+
+        torch.save(self.state_dict(), save_name)
+
         # if os.name == 'nt':
         if True:
             torch.save(self.state_dict(), link_name)

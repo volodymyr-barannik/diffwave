@@ -123,8 +123,10 @@ class DiffWaveLearner:
                     raise RuntimeError(f'Detected NaN loss at step {self.step}.')
                 if self.is_master:
                     if self.step % 50 == 0:
+                        print("it's time to write summary...")
                         self._write_summary(self.step, features, loss)
                     if self.step % len(self.dataset) == 0:
+                        print("it's time to save checkpoint...")
                         self.save_to_checkpoint()
                 self.step += 1
         tqdmobj.close()

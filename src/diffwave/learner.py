@@ -84,10 +84,14 @@ class DiffWaveLearner:
         save_name = f'{self.model_dir}/{save_basename}'
         link_name = f'{self.model_dir}/{filename}.pt'
         torch.save(self.state_dict(), save_name)
-        if os.name == 'nt':
+
+        print(f"saving to checkpoint with save_basename={save_basename}, save_name={save_name}, link_name={link_name}")
+        # if os.name == 'nt':
+        if True:
             torch.save(self.state_dict(), link_name)
         else:
             if os.path.islink(link_name):
+                print(f"unlinking {link_name}")
                 os.unlink(link_name)
             os.symlink(save_basename, link_name)
 

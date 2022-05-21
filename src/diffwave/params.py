@@ -37,16 +37,19 @@ runconfig = AttrDict(
     model_dir='../../models',
     max_steps=None,
     fp16=False,
-    inference_model_path='../../models/weights-47415.pt'
+    inference_model_path='../../models/weights-47415.pt',
+    default_inference_spectrogram='../../samples/LJ-Speech/reference_0.wav.spec.npy',
 )
 
+gdrive_data_dir = '/content/diffwave/samples/LJSpeech/wavs'
 gdrive_model_dir = '/content/drive/MyDrive/diffwave/models'
 runconfig_colab = AttrDict(
-    data_dir='/content/diffwave/samples/LJSpeech/wavs',
+    data_dir=gdrive_data_dir,
     model_dir=gdrive_model_dir,
     max_steps=None,
     fp16=False,
-    inference_model_path=gdrive_model_dir + '/weights-47415.pt'
+    inference_model_path=gdrive_model_dir + '/weights-47415.pt',
+    default_inference_spectrogram=gdrive_data_dir + '/LJ001-0001.wav.spec.npy',
 )
 
 params = AttrDict(

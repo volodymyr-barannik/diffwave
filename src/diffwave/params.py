@@ -39,8 +39,17 @@ runconfig = AttrDict(
     root_dir_rel_to_src='../..',
     max_steps=None,
     fp16=False,
-    inference_model_path='../../models/weights-119355.pt',
-    default_inference_spectrogram='../../samples/LJSpeech/wavs/LJ001-0001.wav.spec.npy',
+    inference_model_path='../../models/weights-47415.pt'
+)
+
+runconfig_collab = AttrDict(
+    data_dir='/content/diffwave/samples/LJSpeech/wavs',
+    model_dir='/content/diffwave/models',
+    root_dir='E:\Code\Projects\TimbreTransfer\diffwave_custom-master\src\diffwave',
+    root_dir_rel_to_src='../..',
+    max_steps=None,
+    fp16=False,
+    inference_model_path='/content/diffwave/models/weights-47415.pt'
 )
 
 params = AttrDict(
